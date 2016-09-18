@@ -1,0 +1,5 @@
+syntax:glob
+output
+pelican-themes
+*~
+__pycache__

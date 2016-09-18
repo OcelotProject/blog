@@ -1,0 +1,38 @@
+0.1 announcement & public demo
+##############################
+
+:date: 2016-05-30 23:00
+:category: blog
+:slug: zero-one-announcement
+:summary: What has been accomplished, and what is planned in the near future
+
+Today we released `version 0.1 of the Ocelot software <https://github.com/OcelotProject/Ocelot/releases/tag/0.1>`__ (two days early!). 0.1 provides the foundation for Ocelot, and doesn't yet have any system model-specific code. You can see the `features that were resolved in the 0.1 milestone here <https://github.com/OcelotProject/Ocelot/issues?q=milestone%3A0.1+is%3Aclosed>`__.
+
+The foundation in code
+======================
+
+The building blocks for Ocelot are `explained in detail in the documentation <https://docs.ocelot.space/foundation.html>`__. The basic workflow is:
+
+* Extract data from ecospold2 files to the `internal dataset format <https://docs.ocelot.space/data_format.html#datasets>`__.
+* Read user input to define a system model as a list of Python functions.
+* Start a logger, and create an output directory.
+* Apply the system model transformation functions to the extracted data, saving the database at each step, and logging changes.
+* Save the final database.
+* Parse the logfile and generate an HTML report.
+
+All these building blocks are included in 0.1 - ``system_model``, ``generic_extractor``, ``Logger``, ``HTMLReport``, etc. You can even see an `example Ocelot run report <https://ocelot.space/example-report/>`__. Bear in mind that we mostly have example transformation functions so far, so the example report is not so impressive. It is also not beautiful - if you have JS/CSS skills and want to contribute, please let us know!
+
+Testing
+=======
+
+Testing, and the documentation of test cases and expectations, are a core component of Ocelot. Our tests currently cover foundational code, such as the extraction of ecospold2 data and running transformation functions. We test locally during development, but also have continuous integrations services testing on `Windows <https://ci.appveyor.com/project/cmutel/ocelot/branch/master>`__ and `Linux <https://travis-ci.org/OcelotProject/Ocelot>`__ every time a commit is published to Github. We even have `automated test coverage <https://coveralls.io/github/OcelotProject/Ocelot?branch=master>`__ data generated as well.
+
+Future development
+==================
+
+Our development for the next few months is defined in `the milestones <https://github.com/OcelotProject/Ocelot/milestones>`__. Each milestone is defined by a number of tasks (issues), and the milestone is reach when all relevant issues are closed. In this way, we are hoping to make the development, priorities, and future plans for Ocelot as transparent as possible. For all development going forward, we will try to follow the `Github suggested workflow <https://guides.github.com/introduction/flow/>`__, with named branches and pull requests. In this way, each addition will come self-contained with documentation and tests, as well as a discussion of its flaws and merits. We have also created wiki pages for `system model variations <https://github.com/OcelotProject/Ocelot/wiki/System-model-variations>`__ and `ideas for Ocelot desired capabilities <https://github.com/OcelotProject/Ocelot/wiki/General-ideas-for-Ocelot-capabilities>`__ - please add your input here!
+
+Public demonstration
+====================
+
+There will be a public demonstration, followed by a Q&A, on `Friday, June 3, at 15:00 CET <https://plus.google.com/events/cgk7pal9815q97dvi2g6eosdcmo>`__.
