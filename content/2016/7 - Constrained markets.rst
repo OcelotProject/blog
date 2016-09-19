@@ -80,7 +80,13 @@ Let's look at the math for some demand vectors. What happens when we want some f
 
 So, requesting one unit of Ⓕ causes no change in the activity producing Ⓕ, but does decrease the activity producing Cryolite Ⓕ, and increase the activity producing Cryolite Ⓗ. And this is exactly what we want - our initial supposition is that the market for Ⓕ is constrained and can't produce more, so that consuming Ⓕ will reduce cryolite production from Ⓕ, which will in turn require increased production of cryolite from Ⓗ, as the total demand for cryolite didn't change.
 
-Some might wonder about the amount of the activity Market Cryolite. Markets often include transportation, which will meant that there is some additional environmental burden from transport even though there is no net different in cryolite production. I am not sure if this effect is intended or not.
+Some might wonder about the amount of the activity Market Cryolite. Markets often include transportation, which will meant that there is some additional environmental burden from transport even though there is no net different in cryolite production. In this case, we are asking for cryolite from the Ⓕ factory, but getting it from the Ⓗ factory, so some amount of transportation is reasonable. Nevertheless, we can consider the market here a `leaky abstraction <https://en.wikipedia.org/wiki/Leaky_abstraction>`__; we do not necessarily want the additional burdens of using a market, but need to use the market "route" to get to the correct producer:
+
+.. figure:: /images/constrained-route.png
+    :alt: Here, there, everywhere.
+    :align: center
+
+    Figure 3: "Route" taken from Cryolite Ⓕ to Cryolite Ⓗ.
 
 What about a demand of Cryolite Ⓕ? Well, this would require more Ⓕ, but we know that this isn't possible. Instead, we would expect that asking for Cryolite Ⓕ would just get us Cryolite Ⓗ, and this is indeed what happens:
 
